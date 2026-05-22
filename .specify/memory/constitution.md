@@ -1,50 +1,60 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+Version change: unknown → 1.0.0
+Modified principles:
+- [PRINCIPLE_1_NAME] → I. Code Quality & Maintainability
+- [PRINCIPLE_2_NAME] → II. Testing Standards
+- [PRINCIPLE_3_NAME] → III. User Experience Consistency
+- [PRINCIPLE_4_NAME] → IV. Performance & Efficiency
+Added sections:
+- Additional Constraints → Quality & Delivery Standards
+- Development Workflow → Delivery Workflow & Review
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ aligned (Constitution Check present)
+- .specify/templates/spec-template.md ✅ aligned
+- .specify/templates/tasks-template.md ✅ aligned
+- .specify/templates/commands/ ⚠ no command templates found
+Follow-up TODOs:
+- None
+-->
+
+# My Project Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Code Quality & Maintainability
+Every code change MUST be clean, readable, and maintainable. Source code is only acceptable when it is supported by consistent naming, explicit intent, modular design, automated linting or static analysis, and an explicit review of architecture or technical debt.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Testing Standards
+Every change MUST be covered by automated tests before merge. The team enforces deterministic unit tests, integration tests for cross-component behavior, and regression coverage for defects; tests MUST run in CI and fail fast when behavior or contracts drift.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. User Experience Consistency
+Every user-facing interaction MUST feel coherent, predictable, and accessible. Interfaces, error messaging, behavior, and styling MUST follow shared usability patterns, with consistent terminology, feedback, and navigation so users do not need to relearn common flows.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Performance & Efficiency
+Every solution MUST meet measurable performance expectations appropriate to its domain. Performance goals are treated as first-class requirements, and teams MUST validate responsiveness, resource use, and scalability through profiling, benchmarks, or budgeted metrics.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Quality & Delivery Standards
+All work MUST comply with the core principles. Quality standards include:
+- Code reviews that verify readability, correctness, and maintainability.
+- Automated test coverage for new and changed behavior.
+- Consistent UX patterns for user flows, errors, and messaging.
+- Performance budgets or measurable targets for latency, throughput, and resource usage.
+- Documentation for non-obvious behavior, architectural decisions, and user-facing expectations.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Delivery Workflow & Review
+The development workflow is governed by these rules:
+- Every pull request MUST include validation against the relevant principles.
+- No work merges until tests pass, review feedback is addressed, and performance checks are complete for impacted areas.
+- UX consistency checks and accessibility considerations MUST be part of review for user-facing changes.
+- New or updated performance requirements MUST be documented alongside the solution and verified before release.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution is the authoritative guide for project practices and takes precedence over informal conventions. All changes to the constitution MUST be documented, reviewed, and versioned.
+- Amendments that add or remove principles, change governance, or alter mandatory standards require a MAJOR version increment.
+- Amendments that introduce new sections, refine existing guidance, or materially expand requirements require at least a MINOR version increment.
+- Clarifications, wording improvements, and non-semantic refinements require a PATCH version increment.
+- Every amendment MUST update the version and the Last Amended date.
+- Every pull request MUST reference this constitution and include a compliance note describing how the change satisfies these principles.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-05-21 | **Last Amended**: 2026-05-21
